@@ -9,9 +9,9 @@ description = "Analyze a Python codebase and print a summary"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-    { name = "Your Name", email = "you@example.com" }
+    { name = "Adebayo Ayomide", email = "adebayo2001ayomide@gmail.com" }
 ]
-dependencies = []
+dependencies = [ "openai>=1.0.0"]
 
 [project.scripts]
 codexray = "codexray.cli:main"

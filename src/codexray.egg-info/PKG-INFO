@@ -2,9 +2,10 @@ Metadata-Version: 2.4
 Name: codexray
 Version: 0.1.0
 Summary: Analyze a Python codebase and print a summary
-Author-email: Your Name <you@example.com>
+Author-email: Adebayo Ayomide <adebayo2001ayomide@gmail.com>
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.0.0
 
 # codexray
 

@@ -54,6 +54,7 @@ def scan_folder(folder_path: str) -> dict:
             stats["bytes"] += size
             stats["files_list"].append({
                 "name": file.name,
+                "path": str(file.relative_to(folder)),   # ← only here
                 "lines": lines,
                 "bytes": size,
             })
@@ -62,7 +63,6 @@ def scan_folder(folder_path: str) -> dict:
 
     return stats
 
-
 def format_bytes(size):
     if size < 1024:
         return f"{size} B"
@@ -70,3 +70,4 @@ def format_bytes(size):
         return f"{size / 1024:.1f} KB"
     else:
         return f"{size / (1024 * 1024):.1f} MB"
+
