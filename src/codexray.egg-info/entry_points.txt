@@ -1,0 +1,2 @@
+[console_scripts]
+codexray = codexray.cli:main

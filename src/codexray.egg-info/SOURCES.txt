@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/codexray/__init__.py
+src/codexray/cli.py
+src/codexray/scanner.py
+src/codexray.egg-info/PKG-INFO
+src/codexray.egg-info/SOURCES.txt
+src/codexray.egg-info/dependency_links.txt
+src/codexray.egg-info/entry_points.txt
+src/codexray.egg-info/top_level.txt
