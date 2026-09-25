@@ -84,15 +84,20 @@ def print_unused(folder):
 def print_tests(folder):
     info = find_tests(folder)
     print(f"Tests in {folder}:\n")
+
+    if not info["test_files"]:
+        print("  No test files found.")
+        if info["framework"]:
+            print(f"  Framework configured: {info['framework']}")
+        return
+
     print(f"  Framework:    {info['framework'] or 'none detected'}")
     print(f"  Test files:   {len(info['test_files'])}")
     print(f"  Tests folder: {'yes' if info['has_tests_dir'] else 'no'}")
     print(f"  Run with:     {info['run_command'] or '(no framework detected)'}")
-
-    if info["test_files"]:
-        print("\n  Test files found:")
-        for f in info["test_files"]:
-            print(f"    {f}")
+    print("\n  Test files found:")
+    for f in info["test_files"]:
+        print(f"    {f}")
 
 
 def print_onboarding(folder):
